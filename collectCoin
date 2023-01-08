@@ -1,0 +1,12 @@
+while true do
+	wait(0.1)
+local player = game.Players.LocalPlayer
+local gems = game:GetService("Workspace").Gems:GetChildren()
+
+for i, v in pairs(gems) do
+    if v.Name == "Coin" then
+        player.Character.HumanoidRootPart.CFrame = v.CFrame
+        wait(0.3) -- set any delay between teleports
+    end
+end
+end
